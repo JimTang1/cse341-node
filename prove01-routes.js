@@ -17,6 +17,9 @@ const requestHandler =(req, res) =>{
         res.write('<html>');
         res.write('<head><title>This is title page</title></head>')
         res.write('<body>')
+        res.write('<p>Here is your user list</p>')
+        res.write('<p>User1-3 is my dummy data</p>')
+
         console.log(lists)
         for(let list of lists){
             res.write(`<li>${list}</li>`);
