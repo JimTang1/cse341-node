@@ -34,6 +34,8 @@ const requestHandler =(req, res) =>{
         res.write('</html>');
         return res.end();
     }
+
+    //clean the name list
     if(url==="/empty-array"&& method ==="POST"){
         lists = [];
         res.writeHead(302,{'Location':'/users'})
