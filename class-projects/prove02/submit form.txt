@@ -1,0 +1,31 @@
+After completing the assignment, be sure to push to Github and Heroku.
+Please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application (e.g., Heroku):
+
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/JimTang1/cse341-node/tree/master/prove02
+
+3. Briefly list and describe the elements of the application that are functioning. 
+404.ejs - distplay 404 page.
+add-product - let users add product to array. (titile, price, description, and rite)
+shop - show the product
+        - remove button - remove the product from the array.
+           router.post('/remove-product', (req, res, next)
+
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+None.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+How to pass data around and how we note.js can really work with the server-side.
+
+6. If you could change this assignment to be more effective or helpful, what would you change?
+No.
+
+7. Please select the category you feel best describes your assignment:
+   5 - Shows creativity and excels above and beyond requirements
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I finished all the challenges and also add a few other CSS to let users have a better user experience. I also didn't add requirements for each input in the add product page because I think that will be a little be easier for testing.
