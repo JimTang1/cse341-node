@@ -12,11 +12,39 @@
         <h1>
           <%= title %>
         </h1>
-        <p>This is the placeholder for Team Activity 02</p>
       </div>
-    </div>
+    </div> 
+    
     <div class="container">
+      <div>
+        <form action="/ta02/addUser" method = "POST">
+          <input type="text" name = "addUser">
+          <button type = "submit">Add</button>
+        </form>
+      </div>
 
+      <div>
+        <form action="/ta02/removeUser" method = "POST">
+          <input type="text" name = "removeUser">
+          <button type = "submit">Remove</button>
+        </form>
+      </div>
+      <ul>
+      <% for(const user of users){ %>
+      <li><%= user %></li>
+      <%  } %>
+    </ul>
+    <% if(removeError) { %>
+    <script>
+      alert('This user does not exist');
+    </script>
+    <% } %>
+
+    <% if(addError) { %>
+      <script>
+        alert('This user already in the list');
+      </script>
+      <% } %>
     </div>
 
 
