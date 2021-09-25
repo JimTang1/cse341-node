@@ -2,7 +2,7 @@ After completing the assignment, be sure to push to Github and Heroku.
 Please answer the questions in this text file and submit it to I-Learn.
 
 1. Copy and paste the URL for your web application (e.g., Heroku):
-https://cse341-products.herokuapp.com/
+https://cse341-prove02.herokuapp.com/
 
 2. Copy and paste the URL for your source code repository (e.g., GitHub):
 https://github.com/JimTang1/cse341-node/tree/master/class-projects/prove02
@@ -16,9 +16,7 @@ shop - show the product
 
 
 4. Briefly describe any pieces of the assignment that are not yet working correctly.
-project No. but heroku
-I push the team activity page to the Heroku, but don't know how to link to my project. I have a folder named "class-projects" that have my project code in it. I have tried a few hours but am not be able to find the solution.
-
+project No
 
 5. Briefly describe the "coolest" thing you learned while completing this assignment.
 How to pass data around and how we note.js can really work with the server-side.
