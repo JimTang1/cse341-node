@@ -24,6 +24,9 @@ const ta02Routes = require('./routes/ta02');
 const ta03Routes = require('./routes/ta03');
 const ta04Routes = require('./routes/ta04');
 
+const prove01Routes = require('./class-projects/prove01/prove01-routes');
+const prove02Routes = require('./class-projects/prove02/routes/shop');
+
 app
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -38,6 +41,9 @@ app
   .use('/ta02', ta02Routes)
   .use('/ta03', ta03Routes)
   .use('/ta04', ta04Routes)
+  .use('/class-projects/prove01/prove01', prove01Routes)
+  .use('/class-projects/prove02/routes/shop', prove02Routes)
+
   .get('/', (req, res, next) => {
     // This is the primary index, always handled last.
     res.render('pages/index', {
