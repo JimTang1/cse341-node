@@ -3,6 +3,7 @@
 
 <head>
   <% include ../includes/header.ejs %>
+   <link rel="stylesheet" href="/stylesheets/ta03.css">
 </head>
 
 <body>
@@ -10,14 +11,59 @@
     <div class="jumbotron text-center">
       <div class="container">
         <h1>
-          <%= title %>
+          <%= pageTitle %>
         </h1>
         <p>This is the placeholder for Team Activity 03</p>
       </div>
     </div>
-    <div class="container">
 
+<!-- <form action="ta03/search" method = "GET">
+  <input type="text" name="q">
+  <button type="submit">search</button>
+</form>
+    <div class="container">
+      <% if(prods.length > 0) { %>
+      <ul>
+        <% for(product of prods) { %>
+          <li><%= product.name %></li>
+        <% } %>
+      </ul>
+      <% } else { %>
+        <h1>No products found!</h1>
+      <% } %>
+    </div> -->
+
+    <div class="container">
+      <% if (prods.length> 0) { %>
+        <h2>Product Listing</h2>
+        <form action="/ta03/search" method="get">
+          <input type="text" name="q" id="q">
+          <button type="submit">Search</button>
+        </form>
+        <div class="product-container">
+          <% for (product of prods) { %>
+            <div class="product">
+              <div>
+                <h3>
+                  <%= product.name %> - $<%= product.price %>
+                </h3>
+                <div class="product-image">
+                  <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+                </div>
+              </div>
+              <div>
+                <p>
+                  <%= product.description %>
+                </p>
+                <p>Tags: <%= product.tags.join(", ") %></p>
+        </div>
+      </div>
+      <% } %>
     </div>
+    <% } else { %>
+    <h2>No Products Found!</h2>
+    <% } %>
+  </div>
 
 
 </body>
