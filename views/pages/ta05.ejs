@@ -1,63 +1,62 @@
-<!DOCTYPE
-<html>
+<!DOCTYPE <html>
+
 <head>
   <%- include("../includes/header.ejs") %>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/<%=style %>" />
+</head>
 
-    
-    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/<%=style %>" />
-            </head>
+<body>
+  <%- include("../includes/nav.ejs") %>
 
-    <body>
-        <%- include("../includes/nav.ejs") %>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1>
+        <%= title %>
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <div>
+        <form action="/ta05/change-style" method="POST">
+          <label for='style'>Banner Color</label>
+          <select id="style" name="style">
+            <option value='style1.css'>Blue</option>
+            <option value='style2.css'>Black</option>
+            <option value='style3.css'>Gray</option>
+          </select>
+          <button type="submit">Change Color</button>
+        </form>
+      </div>
+      <table>
+        <tr>
+          <td>
+            <form action="/ta05/counter" method="POST">
+              <input type="hidden" name="constant" value="1">
+              <button class="btn btn-default" type="submit"> + </button>
+            </form>
+          </td>
+          <td>
+            <%= counter %>
+          </td>
+          <td>
+            <form action="/ta05/counter" method="POST">
+              <input type="hidden" name="constant" value="-1">
+              <button class="btn btn-default" type="submit"> - </button>
+            </form>
+          </td>
+          <td>
+            <form action="/ta05/reset" method="POST">
+              <input type="hidden" name="reset" value="true">
+              <button class="btn btn-default" type="submit">Reset</button>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  </div>
+</body>
 
-        <div class="jumbotron text-center">
-            <div class="container">
-            <h1>
-                <%= title %>
-            </h1>
-            </div>
-        </div>
-        <div class="container">
-            <div>
-            <div>
-                <form action="/ta05/change-style" method="POST">
-                <label for='style'>Banner Color</label>
-                <select id="style" name="style">
-                    <option value='style1.css'>Blue</option>
-                    <option value='style2.css'>Black</option>
-                    <option value='style3.css'>Gray</option>
-                </select>
-                <button type="submit">Change Color</button>
-                </form>
-            </div>
-            <table>
-                <tr>
-                    <td>
-                <form action="/ta05/counter" method="POST">
-                <input type="hidden" name="constant" value="1">
-                <button class="btn btn-default" type="submit"> + </button>
-                </form>
-                </td>
-                <td>
-                <%= counter %>
-                </td>
-                <td>
-                <form action="/ta05/counter" method="POST">
-                    <input type="hidden" name="constant" value="-1">
-                    <button class="btn btn-default" type="submit"> - </button>
-                </form>
-                </td>
-                <td>
-                <form action="/ta05/reset" method="POST">
-                <input type="hidden" name="reset" value="true">
-                <button class="btn btn-default" type="submit">Reset</button>
-                </form>
-                </td>
-                </tr>
-            </table>
-            </div>
-            </div>
-        </div>
-    </body>
 </html>
